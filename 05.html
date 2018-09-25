@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="cek"></p>
+<p></p>
+</body>
+<script>
+let usia    = prompt("masukan Usia","");
+
+if(usia>=21){
+    document.getElementById("cek").innerHTML="DEWASA";
+}else if(usia >=13 && usia<=21){
+    document.getElementById("cek").innerHTML="REMAJA";    
+}else if(usia>=9 && usia<=13){
+    document.getElementById("cek").innerHTML="BIMBINGAN ORANGTUA";
+}else{
+    document.getElementById("cek").innerHTML="SEMUA USIA";
+}
+</script>
+</html>

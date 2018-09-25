@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+    <p id='cek'></p>
+    
+</body>
+<script>
+let nilai =prompt('masukan nilai','');
+
+if(nilai>=90){
+document.getElementById('cek').innerHTML ='A';
+}else if(nilai >= 80 && nilai<=89){
+document.getElementById('cek').innerHTML ='B';
+}else if(nilai >=70 && nilai<=79){
+document.getElementById('cek').innerHTML ='C';
+}else if(nilai>=60 && nilai<=69){
+document.getElementById('cek').innerHTML ='D';
+}else{
+document.getElementById('cek').innerHTML ='E';   
+}
+
+</script>
+</html>

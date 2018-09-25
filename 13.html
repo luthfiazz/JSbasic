@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+        <p id="cek"></p>
+        <p></p>
+  <script>
+const fruits = [
+  {name: 'Pepaya', price: 3000},
+  {name: 'Jagung', price: 2000},
+  {name: 'Mengkudu', price: 4000},
+  {name: 'Kiwi', price: 6000},
+]
+
+const data = fruits.map(items=>{
+    return `${items.name}:${items.price}<br>`
+    
+});
+
+
+
+document.write(data);
+ 
+  </script>  
+</body>
+</html>
+    
+    

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="cek"></p>
+<p></p>
+</body>
+<script>
+let kota=['Jakarta', 'Aceh', 'Malang', 'Medan', 'Bontang', 'Jogja',
+ 'Jakarta', 'Bandung', 'Malang', 'Solo', 'Palembang', 'Bandung'];
+
+ function removeKota(arr){
+     let unik_array = []
+     for(let i=0;i<arr.length;i++){
+         if (unik_array.indexOf(arr[i])==-1){
+             unik_array.push(arr[i])
+         }
+     }
+return unik_array
+ }
+ document.write(removeKota(kota));
+</script>
+</html>

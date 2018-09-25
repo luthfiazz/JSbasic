@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="cek"></p>
+<p></p>
+</body>
+<script>
+    let value =prompt("input",);
+    (function(value){
+
+var numConvert = function (value) {
+    return {
+        from : function (baseFrom) {
+            return {
+                to : function (baseTo) {
+                    return parseInt(value, baseFrom).toString(baseTo);
+                }
+            };
+        }
+    };
+};
+
+//dectobin
+numConvert.dectobin = function(value){
+    return numConvert(value).from(10).to(2);
+};
+// dectohex
+numConvert.dectohex= function(value){
+    return numConvert(value).from(10).to(16);
+};
+// bintohex
+numConvert.bintohex = function(value){
+    return numConvert(value).from(2).to(16);
+};
+this.numConvert=numConvert;
+})(this);
+
+cek1 = numConvert.dectobin(value);
+cek2 = numConvert.dectohex(value);
+cek3 = numConvert.bintohex(value);
+
+document.write('Input : ' + value +' <br> Output :'+ cek1+'<br><br>');
+document.write('Input : ' + value +' <br> Output :'+ cek2+'<br><br>');
+document.write('Input : ' + value +' <br> Output :'+ cek3);
+
+</script>
+</body>
+</html>

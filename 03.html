@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="cek"></p>
+<p></p>
+</body>
+<script>
+let angka = prompt("masukan angka", "");
+for (let angka=1; angka<=1500; angka++){
+
+if ((angka%2)===1) {
+    document.getElementById("cek").innerHTML = "Ganjil";
+}else if((angka%2)===0){
+    document.getElementById("cek").innerHTML = "Genap";
+}
+}
+</script>
+</html>

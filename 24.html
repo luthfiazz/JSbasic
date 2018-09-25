@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div>
+        <label for="">Masukan Data</label>
+        <br>
+        <input type="text" id="myText" value=" " >
+    </div>
+    <br>
+    <div>
+        <!-- <button onclick="kataIn()">Tambah</button> -->
+        <button onclick="toArr()">IN</button>
+        <button onclick="kataIn()">OUT</button>
+    </div>
+    <div>
+        <p id="cek"></p>
+       
+
+    </div>
+</body>
+<script>
+
+
+    function kataIn(){
+    const x = document.getElementById('myText').value;
+    const a1= document.getElementById('cek').innerHTML;
+    const a2= a1.split(' ');
+    a2.unshift(x);
+    document.getElementById("cek").innerHTML = '';
+    document.getElementById("cek").innerHTML += a2.join(' ')+' ';
+
+
+    }
+    
+    function toArr(){
+        const a = document.getElementById('myText').value;
+        const z = document.getElementById('cek').innerHTML;
+        const q = z.split(' ');
+        q.unshift(a)
+        document.getElementById("cek").innerHTML ='';
+        document.getElementById("cek").innerHTML += q.join(' ')+' ';
+
+       console.log(q);
+    }
+
+</script>
+</body>
+</html>

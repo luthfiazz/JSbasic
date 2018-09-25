@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p  id="cek"></p>
+    <p></p>
+</body>
+<p>
+    <label>Celsius</label>
+    <input id="inputCelsius" type="number" placeholder="" oninput="celciusToKelvin(this.value)" onchange="celciusToKelvin(this.value)">
+</p>
+<p>Kelvin: <span id="outputKelvin"></span></p>
+<p>
+    <label>Kelvin</label>
+    <input id="inputCelsius" type="number" placeholder="" oninput="kelvinToCelius(this.value)" onchange="kelvinToCelius(this.value)">
+</p>
+<p>Celsius: <span id="outputCelcius"></span></p>
+<p>
+    <label>Fahrenheit</label>
+    <input id="inputCelsius" type="number" placeholder="" oninput="fahrenheitToCelcius(this.value)" onchange="fahrenheitToCelcius(this.value)">
+</p>
+<p>Celsius: <span id="outputCelcius1"></span></p>
+<p>
+    <label>Celcius</label>
+    <input id="inputCelsius" type="number" placeholder="" oninput="celciusToFahrenheit(this.value)" onchange="celciusToFahrenheit(this.value)">
+</p>
+<p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+<p>
+    <label>Fahrenheit</label>
+    <input id="inputCelsius" type="number" placeholder="" oninput="fahrenheitToKelvin(this.value)" onchange="fahrenheitToKelvin(this.value)">
+</p>
+<p>Kelvin: <span id="outputKelvin1"></span></p>
+<p>
+    <label>Kelvin</label>
+    <input id="inputCelsius" type="number" placeholder="" oninput="kelvinToFahrenheit(this.value)" onchange="kelvinToFahrenheit(this.value)">
+</p>
+<p>Fahrenheit: <span id="outputFahrenheit1"></span></p>
+
+
+
+<script>
+    function celciusToKelvin(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("outputKelvin").innerHTML=valNum+273.15;
+    }
+    function kelvinToCelius(valNum1) {
+        valNum1 = parseFloat(valNum1);
+        document.getElementById("outputCelcius").innerHTML=valNum1-273.15;
+    }
+    
+    
+    function fahrenheitToCelcius(valNum2) {
+        valNum2 = parseFloat(valNum2);
+        document.getElementById("outputCelcius1").innerHTML=(valNum2-32)/1.8;
+    }
+    
+    function celciusToFahrenheit(valNum3) {
+        valNum3 = parseFloat(valNum3);
+        document.getElementById("outputFahrenheit").innerHTML=(valNum3*1.8)+32;
+    }
+    
+    function fahrenheitToKelvin(valNum4) {
+        valNum4 = parseFloat(valNum4);
+        angka = ((valNum4-32)/1.8)+273.15;
+        document.getElementById("outputKelvin1").innerHTML=angka.toFixed(3);
+    }
+    function kelvinToFahrenheit(valNum5) {
+        valNum5 = parseFloat(valNum5);
+        angka2 =((valNum5-273.15)*1.8)+32;
+        // angka3 = Math.ceil(angka2);
+        document.getElementById("outputFahrenheit1").innerHTML=angka2.toFixed(2);
+    }
+</script>
+</body>
+</html>
+

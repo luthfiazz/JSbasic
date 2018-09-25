@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="cek"></p>
+<p></p>
+</body>
+<script>
+let tahun    = prompt("masukan tahun","");
+
+if((tahun%400)==0){
+document.getElementById("cek").innerHTML="kabisat";
+}else if((tahun%100)==0 || (tahun%400)!=0){
+    document.getElementById("cek").innerHTML="bukan kabisat";    
+}
+</script>
+</html>
